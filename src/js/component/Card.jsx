@@ -27,11 +27,7 @@ export default class card extends Component {
           <p></p>
           <div className="ok">
             <span>creation of</span>
-<<<<<<< HEAD
             sylla ibrahim
-=======
-            jules wyvern
->>>>>>> 46816fbf55eab5be56a5961b6c09da56bb0b6768
           </div>
         </div>
       </div>
