@@ -16,9 +16,9 @@
 .card{
     background-color: hsl(216, 50%, 16%);
     color: hsl(0, 0%, 100%);
-    height: 75vh;
-    width: 43vh;
-    border-radius:10px;
+    height: 68vh;
+    width: 40vh;
+    border-radius:20px;
     box-shadow: -10px -10px 10px hsla(213, 60%, 6%, 0.744);
 
     &__img{
@@ -46,7 +46,7 @@
     }
 
     &__price{
-        margin: 10px 20px;
+        margin: 10px 20px 0 20px;
         @include flex(flex,space-between,center);
         &--element1{
             color: hsl(178, 100%, 50%);
