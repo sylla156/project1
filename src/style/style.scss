@@ -1,0 +1,133 @@
+@use './component/mixin.scss' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app{
+    background-color: hsl(217, 54%, 11%);
+    height: 100vh;
+    @include flex;
+    font-family: 'Outfit', sans-serif;
+}
+
+.card{
+    background-color: hsl(216, 50%, 16%);
+    color: hsl(0, 0%, 100%);
+    height: 75vh;
+    width: 43vh;
+    border-radius:10px;
+    box-shadow: -10px -10px 10px hsla(213, 60%, 6%, 0.744);
+
+    &__img{
+        height: 50%;
+        background-image: url(../images/image-equilibrium.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 20px 20px 10px 20px;
+        border-radius: 5px;
+    }
+
+    &__title{
+        margin: 20px 20px 10px 20px;
+        text-transform:capitalize;
+        font-weight: bolder;
+    }
+
+    &__desc{
+        margin: 5px 0px 10px 20px;
+        font-weight: 0;
+        color: hsl(215, 51%, 70%);
+        font-size: 0.9em;
+        line-height:1.5em;
+    }
+
+    &__price{
+        margin: 10px 20px;
+        @include flex(flex,space-between,center);
+        &--element1{
+            color: hsl(178, 100%, 50%);
+            font-size: 0.8em;
+            font-weight: bolder;
+            p{
+                width: 15px;
+                height: 15px;
+                display:inline-block;
+                background-image: url(../images/icon-view.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                transform: rotate(90deg) translateX(2px);
+                margin: 5px 5px 0 0;
+                mix-blend-mode: difference;
+            }
+        }
+
+        &--element2{
+            color: hsl(215, 51%, 70%);
+            font-size: 0.8em;
+            font-weight: bolder;
+            p{
+                width: 15px;
+                height: 15px;
+                display:inline-block;
+                background-image: url(../images/icon-clock.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                transform: translateX(2px);
+                margin: 5px 5px 0 0;
+                mix-blend-mode: difference;
+            }
+
+        }
+    }
+
+    &__hr{
+        border: 0.2px solid hsl(215, 51%, 70%);
+        margin: 20px;
+    }
+
+    &__client {
+        margin: 20px;
+        p{
+            width: 25px;
+            height: 25px;
+            display:inline-block;
+            background-image: url(../images/image-avatar.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 5px 5px 0 0;
+            mix-blend-mode: difference;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+
+        .ok{
+            display: inline-block;
+            margin: 0px 0px 30px 10px;
+            text-align: center;
+            transform:translateY(-10px);
+            text-transform:capitalize;
+            font-size: 0.8em;
+            span{
+                color: hsl(215, 51%, 70%);
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .card{
+        height: 90vh;
+        width: 80vw;
+
+        &__client{
+            .ok{
+                transform: translate(25px,-26px);
+            }
+        }
+    }
+}
